@@ -1,5 +1,8 @@
-import type { Metadata } from "next";
 import "./globals.css";
+import Navigation from "@/components/navigation";
+import NavigationButtons from "@/components/navigation-buttons";
+import type { Metadata } from "next";
+import type React from "react";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,7 +16,48 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="c-padding">
+        <Navigation />
+        <main>{children}</main>
+        <div className="mt-20">
+          <NavigationButtons />
+        </div>
+        <div>
+          <p>Build info:</p>
+          <pre className="bg-gray-100 p-4 rounded">{`
+Route (app)                                         Size     First Load JS
+┌ ○ /_not-found                                     897 B          89.8 kB
+├ ƒ /api/random                                     0 B                0 B
+├ ○ /api/random-cached                              0 B                0 B
+├ ○ /api/random-revalidate-10                       0 B                0 B
+├ ○ /from-express-const-page-revalidate-10          1.22 kB        90.1 kB
+├ ○ /from-express-force-cache                       155 B            89 kB
+├ ○ /from-express-init-opt-revalidate-10            1.22 kB        90.1 kB
+├ ○ /from-express-no-init-opt                       155 B            89 kB
+├ ƒ /from-express-no-store                          155 B            89 kB
+├ ƒ /from-rh-const-page-revalidate-10               1.22 kB        90.1 kB
+├ ƒ /from-rh-force-cache                            155 B            89 kB
+├ ○ /from-rh-init-opt-revalidate-10                 1.22 kB        90.1 kB
+├ ○ /from-rh-no-init-opt                            155 B            89 kB
+├ ƒ /from-rh-no-store                               155 B            89 kB
+├ ƒ /from-rh-revalidate-10-working                  1.22 kB        90.1 kB
+├ ○ /random                                         155 B            89 kB
+├ ○ /random-unstablecache                           155 B            89 kB
+├ ○ /random-unstablecache-const-page-revalidate-10  1.22 kB        90.1 kB
+└ ○ /random-unstablecache-revalidate-10             1.22 kB        90.1 kB
++ First Load JS shared by all                       88.9 kB
+  ├ chunks/180-d8fca08e13d6af62.js                  35.5 kB
+  ├ chunks/4bd1b696-a08a63850fcad1d6.js             51.5 kB
+  └ other shared chunks (total)                     1.9 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+  ▲ Next.js 15.0.0-rc.0
+`}</pre>
+        </div>
+      </body>
     </html>
   );
 }
