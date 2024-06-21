@@ -12,7 +12,6 @@ const Timer = NextDynamic(() => import("@/components/timer"), {
 
 export const revalidate = 10;
 
-
 export default async function RandomUnstableCacheConstRevalidatePage() {
   const getCachedRandomNumber = unstable_cache(
     async () => new Date().toISOString(),
