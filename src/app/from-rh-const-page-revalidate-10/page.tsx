@@ -21,8 +21,7 @@ export default async function FromRHConstRevalidate10Page() {
       <div>{fromRH.currentDate}</div>
       <div>From /api/random route</div>
       <div>
-        fetch using: init options {`{cache: 'no-store'}`} because any other init
-        option breaks the build
+        fetch using: init options {`{cache: 'no-store'}`}
       </div>
       <div>page using: export const revalidate = 10;</div>
       <Timer />

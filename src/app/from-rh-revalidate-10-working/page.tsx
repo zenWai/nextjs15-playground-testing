@@ -9,6 +9,7 @@ const Timer = NextDynamic(() => import("@/components/timer"), {
   ),
 });
 
+//TODO: test if really working VS other ways
 export default async function FromRHConstRevalidate10Page() {
   const response = await fetch(
     "http://localhost:3000/api/random-revalidate-10",

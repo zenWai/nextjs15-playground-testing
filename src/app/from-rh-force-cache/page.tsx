@@ -12,18 +12,6 @@ export default async function FromRHForceCachedPage() {
       <div>From /api/random-cached route</div>
       <div>RH using: export const dynamic = force-static;</div>
       <div>fetch using: init options {`{cache: 'no-store'}`}</div>
-      <div>
-        <div className="text-red-600">
-          - Build breaks with init options {`{cache: 'force-cache'}`} and
-          without init options
-        </div>
-        <div>With express {`cache: 'force-cache'`} is working fine.</div>
-        <div>
-          To make it static using a different route with{" "}
-          {`export const dynamic = 'force-static';`} but still forces me to
-          fetch with {`cache: 'no-store'`} weird
-        </div>
-      </div>
     </main>
   );
 }
