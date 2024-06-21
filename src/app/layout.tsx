@@ -26,35 +26,35 @@ export default function RootLayout({
           <p>Build info:</p>
           <pre className="bg-gray-100 p-4 rounded">{`
 Route (app)                                         Size     First Load JS
-┌ ○ /_not-found                                     897 B          89.8 kB
-├ ƒ /api/random                                     0 B                0 B
+┌ ○ /_not-found                                     871 B          87.9 kB
+├ ○ /api/random                                     0 B                0 B
 ├ ○ /api/random-cached                              0 B                0 B
 ├ ○ /api/random-revalidate-10                       0 B                0 B
-├ ○ /from-express-const-page-revalidate-10          1.22 kB        90.1 kB
-├ ○ /from-express-force-cache                       155 B            89 kB
-├ ○ /from-express-init-opt-revalidate-10            1.22 kB        90.1 kB
-├ ○ /from-express-no-init-opt                       155 B            89 kB
-├ ƒ /from-express-no-store                          155 B            89 kB
-├ ƒ /from-rh-const-page-revalidate-10               1.22 kB        90.1 kB
-├ ƒ /from-rh-force-cache                            155 B            89 kB
-├ ○ /from-rh-init-opt-revalidate-10                 1.22 kB        90.1 kB
-├ ○ /from-rh-no-init-opt                            155 B            89 kB
-├ ƒ /from-rh-no-store                               155 B            89 kB
-├ ƒ /from-rh-revalidate-10-working                  1.22 kB        90.1 kB
-├ ○ /random                                         155 B            89 kB
-├ ○ /random-unstablecache                           155 B            89 kB
-├ ○ /random-unstablecache-const-page-revalidate-10  1.22 kB        90.1 kB
-└ ○ /random-unstablecache-revalidate-10             1.22 kB        90.1 kB
-+ First Load JS shared by all                       88.9 kB
-  ├ chunks/180-d8fca08e13d6af62.js                  35.5 kB
-  ├ chunks/4bd1b696-a08a63850fcad1d6.js             51.5 kB
-  └ other shared chunks (total)                     1.9 kB
+├ ○ /from-express-const-page-revalidate-10          793 B          87.8 kB
+├ ○ /from-express-force-cache                       159 B          87.2 kB
+├ ○ /from-express-init-opt-revalidate-10            793 B          87.8 kB
+├ ○ /from-express-no-init-opt                       159 B          87.2 kB
+├ ƒ /from-express-no-store                          159 B          87.2 kB
+├ ƒ /from-rh-const-page-revalidate-10               793 B          87.8 kB
+├ ƒ /from-rh-force-cache                            159 B          87.2 kB
+├ ○ /from-rh-init-opt-revalidate-10                 793 B          87.8 kB
+├ ○ /from-rh-no-init-opt                            159 B          87.2 kB
+├ ƒ /from-rh-no-store                               159 B          87.2 kB
+├ ƒ /from-rh-revalidate-10-working                  793 B          87.8 kB
+├ ○ /random                                         159 B          87.2 kB
+├ ○ /random-unstablecache                           159 B          87.2 kB
+├ ○ /random-unstablecache-const-page-revalidate-10  793 B          87.8 kB
+└ ○ /random-unstablecache-revalidate-10             792 B          87.8 kB
++ First Load JS shared by all                       87 kB
+  ├ chunks/23-2373bfd2c0d9d2ff.js                   31.5 kB
+  ├ chunks/fd9d1056-62aaf4b921c84028.js             53.6 kB
+  └ other shared chunks (total)                     1.89 kB
 
 
 ○  (Static)   prerendered as static content
 ƒ  (Dynamic)  server-rendered on demand
 
-  ▲ Next.js 15.0.0-rc.0
+  ▲ Next.js 14.2.4
 `}</pre>
         </div>
       </body>
